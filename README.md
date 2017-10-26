@@ -32,3 +32,19 @@ $ docker run --rm -e ADMIN_PASSWORD='T3VjaFRoaXNJc1ByaXZhdGU=' hacher/secure_ser
 * Какой из вариантов более надежен?
 
 ## step 1: ARG for custom builds
+
+[ARG](https://docs.docker.com/engine/reference/builder/#arg) в Dockerfile аналогичен ENV, но используется не при запуске контейнера а при его сборке.
+Соответственно его значение задается также при сборке. Делается это при помощи аргумента `--build-arg <varname>=<value>`.
+Область применения данной функции может включать множество вариантов. 
+Очевидное использование - задание версии приложения (или тега в репозитории) для сборки. 
+
+### Пример
+
+Пример можно посмотреть в папке `step1`.
+
+### Задание
+
+Собрать образ из примера для какой-либо версии консула. См [доступные версии consul](https://releases.hashicorp.com/consul).
+
+
+## step #2: `docker build` useful arguments
