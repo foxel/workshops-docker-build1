@@ -17,4 +17,4 @@ WORKDIR $HOME
 RUN npm install && npm run build
 
 FROM nginx:alpine
-COPY --from=builder /home/app/dist /usr/share/nginx/html
+COPY --from=builder /src/app/dist /usr/share/nginx/html
